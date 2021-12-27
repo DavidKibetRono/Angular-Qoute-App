@@ -1,0 +1,67 @@
+
+
+<div class="container-fluid header">
+    <h1 class="text-center">Motivating Quotes</h1>
+    <hr>
+  
+    <div class="row ">
+
+        
+      <div class="col-md-8 QuotesStore">        
+
+
+<div class="quotes" *ngFor="let quote of quotes;let i=index" >
+
+    <div class="name">
+        <h3 [ngClass]="'quoteColor'" >Quote By: {{quote.name}}</h3>
+    </div>
+    <hr>
+    <div class="mainQuote">
+  
+    </div>
+    <div class="Author">
+        <h2 *ngIf="quote.showAllQuotes">Author: {{quote.author}}</h2>
+    </div>
+
+    <div class="datePosted" >
+        <h2>Posted on:{{quote.datePosted | date}}</h2>
+    </div>
+    <hr>
+    <div class="likevotes">
+        <div class="row">
+            <div class="col-md-4">
+
+
+            </div>
+            
+            <div class="col-md-4">
+
+
+    
+            </div>
+            <div class="col-md-4">
+    
+            </div>
+        </div>
+    </div><br>
+    <h2 *ngIf="quote.showAllQuotes"> Quote posted {{quote.datePosted | timePassed }}  days ago.</h2>
+    </div>
+
+      </div>
+
+      <div class="col-md-4">
+        <app-form (frmData)="myFormData($event)"></app-form>
+      </div>
+  
+</div>
+
+
+
+ 
+  
+
+
+
+
+
+
