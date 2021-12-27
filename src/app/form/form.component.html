@@ -1,1 +1,51 @@
-<p>form works!</p>
+<div class="card cardForm">
+    <div class="card-header">
+        <h2 class="text-center">ADD A QUOTE</h2>
+    </div>
+    <div class="card-body">
+
+       <form (ngSubmit)="formDetails(formInputs)" #formInputs='ngForm' autocomplete="off">
+
+        <div class="form-group"> 
+            <label for="">Username</label>          
+                <input class="form-control" type="text" name="name" #name='ngModel' [(ngModel)]="quotes.name" placeholder="Username" required>
+
+                <div [ngClass]="'errorSize'" [hidden]="name.valid || name.pristine" class="alert alert-danger"><p>Username is required</p></div>
+
+    </div>
+
+    <div class="form-group">             
+                    <label for="">Quote</label><br>                   
+                        <textarea name="mainQuote" id="" cols="51" rows="4" #main="ngModel" [(ngModel)]="quotes.mainQuote" placeholder="Your Quote" required></textarea> 
+                <div [ngClass]="'errorSize'" [hidden]="main.valid || main.pristine" class="alert alert-danger"><p>Quote is required</p></div>
+                                          
+            </div>
+
+            <div class="form-group">
+                    <label for="">Author's Name</label><br>
+                      <input class="form-control" type="text" name="author" #author="ngModel" [(ngModel)]="quotes.author" placeholder="Author's Name" required>
+                <div [ngClass]="'errorSize'" [hidden]="author.valid || author.pristine" class="alert alert-danger"><p>Author's name is required</p></div>
+                      
+            </div>
+
+            <div class="form-group">             
+                <label for="">Posted on</label><br>               
+                        <input class="form-control" type="date" name="datePosted" id="postedOn" #post="ngModel" [(ngModel)]="quotes.datePosted" required><br>
+                <div [ngClass]="'errorSize'" [hidden]="post.valid || post.pristine" class="alert alert-danger"><p>Date is required</p></div>
+
+        </div>
+
+        <div class="form-group">             
+           <button [disabled]="formInputs.invalid" class="btn btn-success btn-lg">Post Quote</button>               
+    </div>
+    <hr>
+    <div class="form-group">
+           <a href="facebook.com"><i class="fa fa-facebook fa-2x"></i>  </a>
+           <a href="twitter.com"> <i class="fa fa-twitter fa-2x"></i>  </a>
+           <a href="linkedin.com"> <i class="fa fa-linkedin fa-2x"></i>  </a>
+ </div>
+       </form>
+
+    </div>
+    
+</div>
