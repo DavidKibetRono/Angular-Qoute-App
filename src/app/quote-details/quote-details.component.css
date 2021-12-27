@@ -1,0 +1,55 @@
+
+.header{
+    background-color: #46606D;
+    height:auto;
+    margin-top: 3px;
+    padding: 20px;
+    }
+.header h1{
+    font-size: 50px;
+    color:goldenrod;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 5px red;
+font-weight: bold;
+font-family: none;
+}
+    
+
+/*---------------------Quotes--------------------------*/
+.QuotesStore{
+    overflow: auto;
+    max-height: 900px;
+  box-shadow: 5px 5px 15px peru;
+background-color:slategrey;
+
+}
+
+.quotes{
+    height: auto;
+    background-color: #F7F7F7;
+    padding: 20px;
+    margin-top: 20px;
+    border: 5px solid black;
+}
+
+#checkbtn{
+float: right;
+}
+
+.quoteColor{
+    color:chocolate;
+    font-size: 50px;
+    float: left;
+}
+.name{
+    height: 70px;
+}
+
+.Author{
+    height: 50px;
+}
+
+.votes button{
+  margin-left: 100px;
+}
+/* ---------------------/Quotes------------------------ */
