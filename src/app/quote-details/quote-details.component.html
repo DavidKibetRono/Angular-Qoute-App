@@ -44,6 +44,7 @@
     
             </div>
             <div class="col-md-4">
+                <app-delete (allComplete)="deleteData($event,i)" *ngIf="quote.showAllQuotes"></app-delete>
     
             </div>
         </div>
