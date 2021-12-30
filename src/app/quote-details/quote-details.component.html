@@ -19,6 +19,8 @@
     </div>
     <hr>
     <div class="mainQuote">
+        <app-quote-highest *ngIf="quote.likevotes === count && quote.likevotes>0 && quote.showAllQuotes" [theQuote]="quote"></app-quote-highest>
+
         <app-quote *ngIf="quote.showAllQuotes" [theQuotes]="quote"></app-quote>
 
   
