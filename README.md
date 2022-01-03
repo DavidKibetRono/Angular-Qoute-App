@@ -19,7 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Live link
 
-Click  <a href="https://joegakumo21.github.io/Quotes-App/">to view the  Angular Quote App</a>
+Click  <a href="https://DavidKibetRono.github.io/Angular-Qoute-App/">to view the  Angular Quote App</a>
 
 
 ## Development server
