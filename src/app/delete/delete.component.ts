@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -7,15 +7,15 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent implements OnInit {
-@Output() allComplete=new EventEmitter<boolean>()
+  @Output() allComplete = new EventEmitter<boolean>()
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  deleteQuote(complete:boolean){
-    
-this.allComplete.emit(complete)
+  deleteQuote(complete: boolean) {
+
+    this.allComplete.emit(complete)
   }
 
 }

@@ -1,79 +1,65 @@
-
-
 <div class="container-fluid header">
     <h1 class="text-center">Motivating Quotes</h1>
     <hr>
-  
+
     <div class="row ">
 
-        
-      <div class="col-md-8 QuotesStore">        
+
+        <div class="col-md-8 QuotesStore">
 
 
-<div class="quotes" *ngFor="let quote of quotes;let i=index" >
+            <div class="quotes" *ngFor="let quote of quotes;let i=index">
 
-    <div class="name">
-        <h3 [ngClass]="'quoteColor'" >Quote By: {{quote.name}}</h3>
-        <button (click)="showquote(i)" class="btn btn-outline-success btn-lg" id="checkbtn">Check <i class="fa fa-plus"></i></button>
+                <div class="name">
+                    <h3 [ngClass]="'quoteColor'">Quote By: {{quote.name}}</h3>
+                    <button (click)="showquote(i)" class="btn btn-outline-success btn-lg" id="checkbtn">Check <i class="fa fa-plus"></i></button>
 
-    </div>
-    <hr>
-    <div class="mainQuote">
-        <app-quote-highest *ngIf="quote.likevotes === count && quote.likevotes>0 && quote.showAllQuotes" [theQuote]="quote"></app-quote-highest>
+                </div>
+                <hr>
+                <div class="mainQuote">
+                    <app-quote-highest *ngIf="quote.likevotes === count && quote.likevotes>0 && quote.showAllQuotes" [theQuote]="quote"></app-quote-highest>
 
-        <app-quote *ngIf="quote.showAllQuotes" [theQuotes]="quote"></app-quote>
-
-  
-    </div>
-    <div class="Author">
-        <h2 *ngIf="quote.showAllQuotes">Author: {{quote.author}}</h2>
-    </div>
-
-    <div class="datePosted" >
-        <h2>Posted on:{{quote.datePosted | date}}</h2>
-    </div>
-    <hr>
-    <div class="likevotes">
-        <div class="row">
-            <div class="col-md-4">
-                <button *ngIf="quote.showAllQuotes" class="btn btn-primary"  (click)="adding(i)"><i class="fa fa-thumbs-up"></i> Upvote {{quote.likevotes}}</button>
+                    <app-quote *ngIf="quote.showAllQuotes" [theQuotes]="quote"></app-quote>
 
 
+                </div>
+                <div class="Author">
+                    <h2 *ngIf="quote.showAllQuotes">Author: {{quote.author}}</h2>
+                </div>
+
+                <div class="datePosted">
+                    <h2>Posted on:{{quote.datePosted | date}}</h2>
+                </div>
+                <hr>
+                <div class="likevotes">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button *ngIf="quote.showAllQuotes" class="btn btn-primary" (click)="adding(i)"><i class="fa fa-thumbs-up"></i> Upvote {{quote.likevotes}}</button>
+
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <app-dislikes *ngIf="quote.showAllQuotes"></app-dislikes>
+
+
+                        </div>
+                        <div class="col-md-4">
+                            <app-delete (allComplete)="deleteData($event,i)" *ngIf="quote.showAllQuotes"></app-delete>
+
+                        </div>
+                    </div>
+                </div><br>
+                <h2 *ngIf="quote.showAllQuotes"> Quote posted {{quote.datePosted | timePassed }} days ago.</h2>
             </div>
-            
-            <div class="col-md-4">
 
-                <app-dislikes *ngIf="quote.showAllQuotes"></app-dislikes>
-
-    
-            </div>
-            <div class="col-md-4">
-                <app-delete (allComplete)="deleteData($event,i)" *ngIf="quote.showAllQuotes"></app-delete>
-    
-            </div>
         </div>
-    </div><br>
-    <h2 *ngIf="quote.showAllQuotes"> Quote posted {{quote.datePosted | timePassed }}  days ago.</h2>
+
+        <div class="col-md-4">
+            <app-form (frmData)="myFormData($event)"></app-form>
+        </div>
+
     </div>
 
-      </div>
-
-      <div class="col-md-4">
-        <app-form (frmData)="myFormData($event)"></app-form>
-      </div>
-  
-</div>
-
-<app-footer></app-footer>
-
-
-
-
- 
-  
-
-
-
-
-
-
+    <app-footer></app-footer>

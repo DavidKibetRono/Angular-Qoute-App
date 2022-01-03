@@ -8,7 +8,7 @@ export class HighestUpvotesDirective {
     this.elem.nativeElement.style.backgroundColor = 'lightblue';
     this.elem.nativeElement.style.border = '1px solid black';
 
-   }
+  }
 
 }
 

@@ -1,24 +1,25 @@
-
-input:focus{
+input:focus {
     border: none;
 }
-.cardForm{
+
+.cardForm {
     padding: 20px;
     background-color: cadetblue;
     overflow: auto;
+    font-size: 25px;
+    height: 705px;
+}
 
-font-size: 25px;
-    height:705px;
+#postedOn {
+    border: 1px solid black;
 }
-#postedOn{
-    border:1px solid black;
-}
-i{
+
+i {
     color: blue;
     margin-left: 50px;
 }
 
-.errorSize{
-    height:50px;
+.errorSize {
+    height: 50px;
     font-size: 20px;
 }

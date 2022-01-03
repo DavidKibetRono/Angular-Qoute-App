@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Quote } from '../quote'; 
+import { Quote } from '../quote';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   public count = 0;
 
- @Input() theQuotes!:Quote 
+  @Input() theQuotes!: Quote
 
   constructor() { }
 
@@ -18,16 +18,16 @@ export class QuoteComponent implements OnInit {
   }
 
 
-  quotes:Quote[]=[
-    new Quote("Kibet","Don't confuse patience and wasting time please","Mark Kurt",new Date(2021,12,17)),
-    new Quote("Mercy","Better late than never","Antonio Rudiger",new Date(2020,12,17))
-    ]
+  quotes: Quote[] = [
+    new Quote("Kibet", "Don't confuse patience and wasting time please", "Mark Kurt", new Date(2021, 12, 17)),
+    new Quote("Mercy", "Better late than never", "Antonio Rudiger", new Date(2020, 12, 17))
+  ]
 
-    myFormData(data:any){
-      data.datePosted=new Date(data.datePosted)
-      this.quotes.push(data)
-      // data.reset()
-        }
+  myFormData(data: any) {
+    data.datePosted = new Date(data.datePosted)
+    this.quotes.push(data)
+    // data.reset()
+  }
 
 
 
